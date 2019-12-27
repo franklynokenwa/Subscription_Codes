@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Subscription Codes</string>
+    <string name="content_description">This is the icon used to dial a number</string>
+    <string name="permission_not_granted">permission not granted</string>
+    <string name="telephony_not_enabled">telephony not enabled</string>
+    <string name="telephony_enabled">telephony enabled</string>
+    <string name="failure_permission">failure_permission</string>
+    <string name="messi">messi</string>
+</resources>
