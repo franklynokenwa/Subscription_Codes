@@ -29,9 +29,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private static final String TAG = "RecyclerViewAdapter";
     private static final int REQUEST_CALL = 1;
 
-    private ArrayList<String> mImageViews = new ArrayList<>();
-    private ArrayList<String> mBlogDescriptions = new ArrayList<>();
-    public ArrayList<String> mSendIcons = new ArrayList<>();
+    private ArrayList<String> mImageViews;
+    private ArrayList<String> mBlogDescriptions;
+    public ArrayList<String> mSendIcons;
     private Context mContext;
     public RecyclerViewAdapter mViewAdapter;
 
@@ -47,17 +47,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list_item, parent, false);
-        ViewHolder holder = new ViewHolder(view);
-        return holder;
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         Log.d(TAG, "onBindViewHolder: called.");
 
+
         Glide.with(mContext)
                 .asBitmap()
                 .load(mImageViews.get(position))
+                .fitCenter()
                 .into(holder.mImageView);
 
         holder.mBlogDescription.setText(mBlogDescriptions.get(position));

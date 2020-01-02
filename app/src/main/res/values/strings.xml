@@ -6,4 +6,7 @@
     <string name="telephony_enabled">telephony enabled</string>
     <string name="failure_permission">failure_permission</string>
     <string name="messi">messi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
